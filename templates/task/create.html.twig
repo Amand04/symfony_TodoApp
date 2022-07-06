@@ -5,7 +5,7 @@
         {% if app.request.get("_route") == "create_task" %}
             <h3>Créer une nouvelle tâche</h3>
         {% else %}
-            <h3>Modifier la tâche {{ task.color }}</h3>
+            <h3>Modifier la tâche {{ task.title }}</h3>
         {% endif %}
 
         {{ form_start(form) }}

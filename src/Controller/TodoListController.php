@@ -22,7 +22,6 @@ class TodoListController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($todoList);
             $em->flush();
