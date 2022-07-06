@@ -47,12 +47,8 @@ class Task
         return $this->title;
     }
 
-    /**
-     * Set the value of title
-     *
-     * @return  self
-     */
-    public function setTitle(string $title)
+
+    public function setTitle(string $title): self
     {
         $this->title = $title;
 

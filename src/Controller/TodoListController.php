@@ -26,7 +26,7 @@ class TodoListController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($todoList);
             $em->flush();
-            /*return $this->redirectToRoute("read_all");*/
+            return $this->redirectToRoute("read_all");
         }
 
         return $this->render("todo_list/create.html.twig", [
@@ -69,10 +69,11 @@ class TodoListController extends AbstractController
     /**
      * @Route("/delete-list/{id}", name="delete_list")
      */
-    /*public function delete(TodoList $list): Response {
+    public function delete(TodoList $list): Response
+    {
         $em = $this->getDoctrine()->getManager();
         $em->remove($list);
         $em->flush();
         return $this->redirectToRoute("read_all");
-    }*/
+    }
 }

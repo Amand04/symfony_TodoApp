@@ -50,7 +50,7 @@ class TodoList
 
     public function __construct()
     {
-        $this->Tasks = new ArrayCollection();
+        $this->tasks = new ArrayCollection();
     }
 
     /**
@@ -116,7 +116,7 @@ class TodoList
     /**
      * @return Collection|Task[]
      */
-    public function getTasks()/*: Collection*/
+    public function getTasks(): Collection
     {
         return $this->tasks;
     }
